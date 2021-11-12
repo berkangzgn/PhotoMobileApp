@@ -95,9 +95,9 @@
                                 <rect key="frame" x="144" y="425" width="126" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Logout"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Sign Out"/>
                                 <connections>
-                                    <action selector="logoutClicked:" destination="glq-Ai-rFE" eventType="touchUpInside" id="Cod-1q-2yM"/>
+                                    <action selector="signoutClicked:" destination="glq-Ai-rFE" eventType="touchUpInside" id="zb5-L5-wA4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,7 +132,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="HqC-zv-IT7">
             <objects>
-                <tabBarController id="95b-Eq-3Pi" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="95b-Eq-3Pi" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1ee-Si-zSy"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ggl-tI-VaE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
