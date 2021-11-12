@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="53.623188405797109" y="77.678571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--UploadVC-->
         <scene sceneID="t8R-Pe-HEw">
             <objects>
-                <viewController id="qtk-4l-W3S" sceneMemberID="viewController">
+                <viewController id="qtk-4l-W3S" customClass="UploadVC" customModule="PhotoWebApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dyo-Kf-uwV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,12 +81,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBg-Oy-28W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="382"/>
+            <point key="canvasLocation" x="1632" y="467"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
+        <scene sceneID="7ws-QK-mdB">
+            <objects>
+                <viewController id="glq-Ai-rFE" customClass="SettingsVC" customModule="PhotoWebApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ofn-35-Ik6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBV-Uo-uKe">
+                                <rect key="frame" x="144" y="425" width="126" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="glq-Ai-rFE" eventType="touchUpInside" id="Cod-1q-2yM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vL0-o0-gRy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="dial" catalog="system" id="8Dg-Rx-xIP"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toVC" modalPresentationStyle="fullScreen" id="JAG-0o-oM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPt-DK-0cP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357.971014492754" y="77.678571428571431"/>
+        </scene>
+        <!--FeedVC-->
         <scene sceneID="FRY-AM-hMl">
             <objects>
-                <viewController id="K4f-Vg-EPH" sceneMemberID="viewController">
+                <viewController id="K4f-Vg-EPH" customClass="FeedVC" customModule="PhotoWebApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hk9-2V-R8L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSS-AU-aSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-224"/>
+            <point key="canvasLocation" x="1632" y="-269"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HqC-zv-IT7">
@@ -112,6 +142,7 @@
                     <connections>
                         <segue destination="K4f-Vg-EPH" kind="relationship" relationship="viewControllers" id="e3W-lP-h5L"/>
                         <segue destination="qtk-4l-W3S" kind="relationship" relationship="viewControllers" id="X0W-Tn-E2a"/>
+                        <segue destination="glq-Ai-rFE" kind="relationship" relationship="viewControllers" id="Fa7-yS-O2u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZId-yA-utL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -120,6 +151,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dial" catalog="system" width="128" height="106"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
