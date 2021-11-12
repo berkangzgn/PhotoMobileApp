@@ -39,7 +39,20 @@ class ViewController: UIViewController {
     
     
     @IBAction func loginClicked(_ sender: Any) {
-        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            // Completion : İşlem bitince ne yapsın?
+            // Bu işlem asenkron olmalı ki kullanıcı kaydı sırasında kullanıcıyı arayüzde kilitlemeyelim
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { AuthDataResult, Error in
+                if Error != nil {
+                    self.errorMessage(titleInput: "Error", messageInput: Error?.localizedDescription ?? "Beklenmedik bir hata oluştu.")
+                } else {
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
+            
+        } else {
+            errorMessage(titleInput: "Hatalı Giriş!", messageInput: "E-mail ya da parolanız boş bırakılamaz..")
+        }
     }
     
     
