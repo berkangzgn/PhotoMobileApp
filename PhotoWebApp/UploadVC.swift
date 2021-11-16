@@ -42,11 +42,16 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate,  UINavigation
             // Görseli imageView olarak kaydedemediğimiz için veri tipini data'ya çevirip db'e öyle kaydediyoruz
         if let data = uploadImageView.image?.jpegData(compressionQuality: 0.5){
                 // Aldığımız data'yı images folder altına koyuyoruz ve bir isim veriyoruz.
-            let imageReferance = mediaFolder.child("image.jpg")
-            // veriyi
+                
+            let uuid = UUID().uuidString
+            let imageReferance = mediaFolder.child("\(uuid).jpg")
+            
+            // let imageReferance = mediaFolder.child("image.jpg")  =>   Normalde böyle yazmıştık ancak gelen tüm görsellerin adı aynı olduğu için program önceki verinin üstüne yazıyordu ve yeni bir görsel oluşturmuyorudu. Biz de uuid vererek bu sorunu çözdük.
+            
+                // Veriyi indirmek için gerekli kodlar.
             imageReferance.putData(data, metadata: nil) { (storageMetaData, error ) in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    self.errorMessage(title: "Error!", message: error?.localizedDescription ?? "Please try again..")
                 } else {
                     imageReferance.downloadURL { url, error in
                         if error == nil {
@@ -90,4 +95,11 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate,  UINavigation
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func errorMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
