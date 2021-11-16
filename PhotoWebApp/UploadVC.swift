@@ -53,11 +53,25 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate,  UINavigation
                 if error != nil {
                     self.errorMessage(title: "Error!", message: error?.localizedDescription ?? "Please try again..")
                 } else {
-                    imageReferance.downloadURL { url, error in
+                    imageReferance.downloadURL { (url, error) in
                         if error == nil {
                                 // imageUrl'yi stringe çevirip işlemlerimizi yönlendiriyoruz
                             let imageUrl = url?.absoluteString
-                            print(imageUrl)
+                            
+                                // Eğer imageUrl bir şeye atama yapıalbiliyorsa string'dir. Bu yüzden string olduğundan emin olduktan sonra işleme devam ediyoruz.
+                            if let imageUrl = imageUrl {
+                                let firestoreDB = Firestore.firestore()
+                                    // Veri tiplerini tranımlıyoruz.
+                                let firestorePost = ["imageUrl" : imageUrl, "commentText" : self.commentTextField.text!, "email" : Auth.auth().currentUser!.email!, "date" : FieldValue.serverTimestamp()] as [String : Any]
+                                    // Tanımladığımız verileri DB'e ekliyoruz
+                                firestoreDB.collection("Post").addDocument(data: firestorePost) { (error) in
+                                    if error != nil {
+                                        self.errorMessage(title: "Error!", message: error?.localizedDescription ?? "Please try again..")
+                                    } else {
+                                        
+                                    }
+                                }
+                            }
                         }
                     }
                 }
