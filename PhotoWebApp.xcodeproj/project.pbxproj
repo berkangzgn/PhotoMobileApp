@@ -17,6 +17,7 @@
 		04FC49B8273E86C400C423F3 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49B7273E86C400C423F3 /* FeedVC.swift */; };
 		04FC49BA273E86E800C423F3 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49B9273E86E800C423F3 /* UploadVC.swift */; };
 		04FC49BC273E86FB00C423F3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49BB273E86FB00C423F3 /* SettingsVC.swift */; };
+		04FC49C02743DEF800C423F3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49BF2743DEF800C423F3 /* FeedCell.swift */; };
 		89655E839EBC50F73DF1157E /* Pods_PhotoWebApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB42E2036016324EDF3AFD /* Pods_PhotoWebApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		04FC49B7273E86C400C423F3 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		04FC49B9273E86E800C423F3 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		04FC49BB273E86FB00C423F3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		04FC49BF2743DEF800C423F3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		2BFF6E5560B242BB2158A5F4 /* Pods-PhotoWebApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWebApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoWebApp/Pods-PhotoWebApp.release.xcconfig"; sourceTree = "<group>"; };
 		83CB42E2036016324EDF3AFD /* Pods_PhotoWebApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoWebApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C6919F57EC6C4AEEA17790 /* Pods-PhotoWebApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWebApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoWebApp/Pods-PhotoWebApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				04FC49A3273E5C8A00C423F3 /* SceneDelegate.swift */,
 				04FC49A5273E5C8A00C423F3 /* ViewController.swift */,
 				04FC49B7273E86C400C423F3 /* FeedVC.swift */,
+				04FC49BF2743DEF800C423F3 /* FeedCell.swift */,
 				04FC49B9273E86E800C423F3 /* UploadVC.swift */,
 				04FC49BB273E86FB00C423F3 /* SettingsVC.swift */,
 				04FC49A7273E5C8A00C423F3 /* Main.storyboard */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FC49C02743DEF800C423F3 /* FeedCell.swift in Sources */,
 				04FC49B8273E86C400C423F3 /* FeedVC.swift in Sources */,
 				04FC49A6273E5C8A00C423F3 /* ViewController.swift in Sources */,
 				04FC49A2273E5C8A00C423F3 /* AppDelegate.swift in Sources */,

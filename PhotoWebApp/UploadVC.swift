@@ -68,7 +68,11 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate,  UINavigation
                                     if error != nil {
                                         self.errorMessage(title: "Error!", message: error?.localizedDescription ?? "Please try again..")
                                     } else {
-                                        
+                                            // Girilen veri bilgilerini boşaltıyoruz
+                                        self.uploadImageView.image = UIImage(named: "upload")
+                                        self.commentTextField.text = ""
+                                            // Feed sekmesine geçmek için
+                                        self.tabBarController?.selectedIndex = 0
                                     }
                                 }
                             }
