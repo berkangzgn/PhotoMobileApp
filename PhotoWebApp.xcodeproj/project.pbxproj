@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04697E6F274533FC00154D32 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04697E6E274533FC00154D32 /* Post.swift */; };
 		04FC49A2273E5C8A00C423F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49A1273E5C8A00C423F3 /* AppDelegate.swift */; };
 		04FC49A4273E5C8A00C423F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49A3273E5C8A00C423F3 /* SceneDelegate.swift */; };
 		04FC49A6273E5C8A00C423F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC49A5273E5C8A00C423F3 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04697E6E274533FC00154D32 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		04FC499E273E5C8A00C423F3 /* PhotoWebApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoWebApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FC49A1273E5C8A00C423F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FC49A3273E5C8A00C423F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				04FC49BF2743DEF800C423F3 /* FeedCell.swift */,
 				04FC49B9273E86E800C423F3 /* UploadVC.swift */,
 				04FC49BB273E86FB00C423F3 /* SettingsVC.swift */,
+				04697E6E274533FC00154D32 /* Post.swift */,
 				04FC49A7273E5C8A00C423F3 /* Main.storyboard */,
 				04FC49AA273E5C8B00C423F3 /* Assets.xcassets */,
 				04FC49AC273E5C8B00C423F3 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 				04FC49C02743DEF800C423F3 /* FeedCell.swift in Sources */,
 				04FC49B8273E86C400C423F3 /* FeedVC.swift in Sources */,
 				04FC49A6273E5C8A00C423F3 /* ViewController.swift in Sources */,
+				04697E6F274533FC00154D32 /* Post.swift in Sources */,
 				04FC49A2273E5C8A00C423F3 /* AppDelegate.swift in Sources */,
 				04FC49BA273E86E800C423F3 /* UploadVC.swift in Sources */,
 				04FC49A4273E5C8A00C423F3 /* SceneDelegate.swift in Sources */,
