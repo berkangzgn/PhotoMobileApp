@@ -30,7 +30,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let firestoreDB = Firestore.firestore()
             // Altta verdiğimiz collection ismi kesinlikle DB'deki collection ismiyle uyuşmalı yoksa çalışmaz            ****************** Kontrol et çalışmayabilir *****************
 
-        firestoreDB.collection("Post").addSnapshotListener { snapshot, error in
+            // Descending true : En yeni en üstte, false : En eski en üstte
+        firestoreDB.collection("Post").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription)
             } else {
