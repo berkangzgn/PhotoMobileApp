@@ -11,6 +11,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 # Cloud üzerinde depolama
 pod 'Firebase/Storage'
+# Web üzerinden image çekme
+pod 'SDWebImage', '~> 5.0'
 
 
   # Pods for PhotoWebApp

@@ -12,14 +12,12 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var userTextField: UILabel!
     @IBOutlet weak var commentTextField: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
-    
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

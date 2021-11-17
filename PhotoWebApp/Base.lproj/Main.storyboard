@@ -186,7 +186,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-hS-5St">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-hS-5St">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -219,6 +219,8 @@
                                                     <rect key="frame" x="20" y="48" width="374" height="452"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="374" id="Ydm-qe-gx5"/>
+                                                        <constraint firstAttribute="height" constant="452" id="oRb-ER-uPr"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="ofS-p4-x18"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>

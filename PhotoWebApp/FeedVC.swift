@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -29,12 +30,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let firestoreDB = Firestore.firestore()
             // Altta verdiğimiz collection ismi kesinlikle DB'deki collection ismiyle uyuşmalı yoksa çalışmaz            ****************** Kontrol et çalışmayabilir *****************
 
-        firestoreDB.collection("Post").addSnapshotListener { (snapshot, error) in
+        firestoreDB.collection("Post").addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription)
             } else {
                     // Snapshot optional (Snapshot? : İçinde veri olabilir olmayabilir) olduğu için bunun kontrolünü yapmamız gerekiyor.
                 if snapshot?.isEmpty != true && snapshot != nil {
+                    
+                        // Eskilerle birlikte kendini tekrarlamasın diye
+                    self.userArray.removeAll(keepingCapacity: false)
+                    self.commentArray.removeAll(keepingCapacity: false)
+                    self.imageArray.removeAll(keepingCapacity: false)
+                    
                         // Documents bize verileri dizi halinde verir.
                     for document in snapshot!.documents {
                         // let documentID = document.documentID
@@ -63,7 +70,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
         cell.userTextField.text = userArray[indexPath.row]
         cell.commentTextField.text = commentArray[indexPath.row]
-        cell.postImageView.image = UIImage(named: "upload")
+        cell.postImageView.sd_setImage(with: URL(string: self.imageArray[indexPath.row]), completed: nil)
         
         return cell
     }
