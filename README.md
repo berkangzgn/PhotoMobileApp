@@ -18,7 +18,6 @@ The PhotoMobileApp application is a project I developed to apply what I learned.
 + App modularization
 + SwiftLint
 + SOLID principle
-+ SwfitUI API call + fetch JSON data
 <br/><br/>
 
 ## Images
