@@ -8,12 +8,10 @@
 import Foundation
 
 class Post {
-    
-    var email : String
-    var comment : String
-    var image : String
-    
-    init (email: String, comment : String, image : String) {
+    var email: String
+    var comment: String
+    var image: String
+    init (email: String, comment: String, image: String) {
         self.email = email
         self.comment = comment
         self.image = image

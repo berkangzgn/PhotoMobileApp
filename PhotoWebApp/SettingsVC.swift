@@ -12,11 +12,7 @@ class SettingsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-    
     @IBAction func signoutClicked(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -25,6 +21,4 @@ class SettingsVC: UIViewController {
             print("Error in sigoutClicked catch !")
         }
     }
-    
-    
 }
