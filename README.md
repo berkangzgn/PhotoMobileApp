@@ -21,8 +21,8 @@ The PhotoMobileApp application is a project I developed to apply what I learned.
 + SwfitUI API call + fetch JSON data
 <br/><br/>
 
-### Images
-<img src="/Images/login.png" align="left" width="350"/>
-<img src="/Images/homepage.png" align="right" width="350"/>
-<img src="/Images/settings.png" align="left" width="350"/>
-<img src="/Images/upload.png" align="right" width="350"/>
+## Images
+<img src="/Images/login.png" align="left" width="200"/>
+<img src="/Images/homepage.png" align="left" width="200"/>
+<img src="/Images/settings.png" align="right" width="200"/>
+<img src="/Images/upload.png" align="right" width="200"/>
