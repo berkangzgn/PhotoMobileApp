@@ -23,6 +23,6 @@ The PhotoMobileApp application is a project I developed to apply what I learned.
 
 ### Images
 <img src="/Images/login.png" align="left" width="350"/>
-<img src="/Images/homepage.png" align="right" width="350"/><br/><br/>
+<img src="/Images/homepage.png" align="right" width="350"/>
 <img src="/Images/settings.png" align="left" width="350"/>
 <img src="/Images/upload.png" align="right" width="350"/>
